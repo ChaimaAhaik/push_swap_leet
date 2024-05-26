@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:34:41 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/22 17:25:05 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:02:27 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	ptr[i] = '\0';
 	return (ptr);
+}
+
+int	ft_free_all(char **t, size_t index)
+{
+	size_t	j;
+
+	j = 0;
+	if (t[index])
+	{
+		while (j <= index)
+		{
+			free(t[j]);
+			j++;
+		}
+		free(t);
+		return (1);
+	}
+	return (0);
 }

@@ -13,7 +13,7 @@ SRCS := mandatory/operations1.c mandatory/operations2.c \
 BONUS_SRC := bonus/get_next_line_bonus.c bonus/moves1_bonus.c bonus/moves2_bonus.c bonus/moves3_bonus.c \
 			bonus/main_bonus.c bonus/functions_bonus.c bonus/ft_lib2_bonus.c bonus/lib_functions_bonus.c \
 			bonus/ft_lists_bonus.c bonus/ft_lists2_bonus.c bonus/functions1_bonus.c bonus/check_inputs_bonus.c \
-			bonus/ft_printf_bonus.c \
+			bonus/ft_printf_bonus.c\
 
 OBJS = $(SRCS:.c=.o)
 

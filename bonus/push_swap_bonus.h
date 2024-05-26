@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:03:38 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/23 10:49:14 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:16:52 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		check_for_char(char *str);
 int		ft_fill_free(char **t, size_t index);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst);
 void	ft_lstdelone(t_list *lst);
 size_t	ft_strlen(char *str);
 void	index_func(t_list **a);
@@ -81,5 +81,5 @@ int		moves(t_list **a, t_list **b);
 int		ft_strcmp(char *dest, char *src);
 int		nbr(char *str, t_list **number);
 int		moves_cmp(t_list **a, t_list **b, char *p);
-
+int		ft_free_all(char **t, size_t index);
 #endif

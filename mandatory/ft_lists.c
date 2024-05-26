@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:52:22 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/22 16:55:34 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:00:22 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ void	ft_lstdelone(t_list *lst)
 	free(lst);
 }
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst)
 {
 	t_list	*p;
 	t_list	*mynode;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	p = *lst;
 	while (p != NULL)

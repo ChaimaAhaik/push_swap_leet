@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 11:07:47 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/23 10:56:13 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:04:57 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	nbr(char *str, t_list **number)
 		content = ft_atoi(ptr[i], &err);
 		if (check_input(*number, content) == 1 || (err == 1))
 		{
-			ft_fill_free(ptr, i + 1);
+			ft_free_all(ptr, i);
 			return (0);
 		}
 		ft_lstadd_back(number, ft_lstnew(content));

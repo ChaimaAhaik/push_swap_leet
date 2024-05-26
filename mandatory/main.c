@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:01:51 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/22 17:47:11 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 08:58:37 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	main(int argc, char **argv)
 		{
 			j = nbr(argv[i], &number);
 			if (j == 0)
-				return (ft_lstclear(&number, free), write(2, "Error\n", 6), 1);
+				return (ft_lstclear(&number), write(2, "Error\n", 6), 1);
 			i++;
 		}
 		index_func(&number);
 		if (list_is_sorted(number) == 1)
 			my_stacks(&number);
-		ft_lstclear(&number, free);
+		ft_lstclear(&number);
 	}
 	return (0);
 }

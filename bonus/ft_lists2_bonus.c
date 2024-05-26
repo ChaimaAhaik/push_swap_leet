@@ -6,7 +6,7 @@
 /*   By: cahaik <cahaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 22:14:24 by cahaik            #+#    #+#             */
-/*   Updated: 2024/05/23 10:51:00 by cahaik           ###   ########.fr       */
+/*   Updated: 2024/05/26 09:07:27 by cahaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,22 @@ int	ft_lstsize(t_list *lst)
 		i++;
 	}
 	return (i);
+}
+
+int	ft_free_all(char **t, size_t index)
+{
+	size_t	j;
+
+	j = 0;
+	if (t[index])
+	{
+		while (j <= index)
+		{
+			free(t[j]);
+			j++;
+		}
+		free(t);
+		return (1);
+	}
+	return (0);
 }
